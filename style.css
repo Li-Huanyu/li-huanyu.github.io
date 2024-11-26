@@ -49,8 +49,29 @@ p {line-height: 1.5em;}
 }
 
 @media only screen and (max-width: none) {
-    .publication {margin-bottom: 46px;}
-    .publication .row-media {width: 1060px; height: 130px; margin: auto; margin-bottom: 12px; display: block;}
-    .publication .row-text {display: block; width: 100%; margin-left: 0;}
+    .publication {
+        display: flex; /* 使用 Flexbox 排列内容 */
+        margin-bottom: 32px; 
+        width: 100%; /* 确保 publication 类的宽度为100% */
+        max-width: none; /* 去掉最大宽度限制 */
+        padding: 0; /* 移除任何不必要的内边距 */
+    }
+    .row-media {
+        display: block; /* 媒体部分显示为块级元素 */
+        width: 160px; /* 固定宽度 */
+        height: 90px; 
+        background-position: center; 
+        background-size: contain; 
+        background-repeat: no-repeat; 
+    }
+
+    .row-text {
+        display: flex; /* 使用 Flexbox 布局 */
+        flex-direction: column; /* 垂直排列文本 */
+        margin-left: 12px; 
+        line-height: 1.5em; 
+        width: calc(100% - 160px); /* 自动填充剩余空间 */
+        max-width: none; /* 移除最大宽度限制 */
+    }
     .press {display: block;}
 }
