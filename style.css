@@ -28,7 +28,7 @@ p {line-height: 1.5em;}
 .bulletpoints {line-height: 1.5em;}
 .row {box-sizing: border-box;}
 .row-media {display: block; float: left; width: 160px; height: 90px; background-position: center; background-size: contain; background-repeat: no-repeat;}
-.row-text {display: block; float: left; margin-left: 12px; line-height: 1.5em; max-width: none;}
+.row-text {display: block; float: left; margin-left: 12px; line-height: 1.5em; max-width: 566px;}
 .row-text span {line-height: inherit;}
 .clearfix {content: ""; clear: both; display: table;}
 .publication {margin-bottom: 32px; padding-left: 8px;}
@@ -36,42 +36,21 @@ p {line-height: 1.5em;}
 .press {width: 100px; height: 80px; border: 1px solid #def; margin-right: 12px; background-size: cover;}  
 .img-contain {background-size: contain !important;}
 .footer {background-color: #345; width: 100%}
-.footer-content {color: #fff; font-size: 10px; padding: 6px 0; max-width: none; margin: auto;}
+.footer-content {color: #fff; font-size: 10px; padding: 6px 0; max-width: 748px; margin: auto;}
 .footer-content a {color: #fff; text-decoration: underline;}
 .footer-content a:hover {color: #f09228 !important;}
 .stars {font-size: 10px; display: inline-block; margin-left: 6px; color: #666;}
 
-@media only screen and (max-width: none) {
+@media only screen and (max-width: 1550px) {
     .header-profile-picture, .header-text {display: block; margin: auto; text-align: center;}
     .header-profile-picture {margin-bottom: 12px; width: 140px; height: 140px;}
     body {font-size: 18px;}
     a.btn {font-size: 14px; padding: 2px 6px;}
 }
 
-@media only screen and (max-width: none) {
-    .publication {
-        display: flex; /* 使用 Flexbox 排列内容 */
-        margin-bottom: 32px; 
-        width: 100%; /* 确保 publication 类的宽度为100% */
-        max-width: none; /* 去掉最大宽度限制 */
-        padding: 0; /* 移除任何不必要的内边距 */
-    }
-    .row-media {
-        display: block; /* 媒体部分显示为块级元素 */
-        width: 160px; /* 固定宽度 */
-        height: 90px; 
-        background-position: center; 
-        background-size: contain; 
-        background-repeat: no-repeat; 
-    }
-
-    .row-text {
-        display: flex; /* 使用 Flexbox 布局 */
-        flex-direction: column; /* 垂直排列文本 */
-        margin-left: 12px; 
-        line-height: 1.5em; 
-        width: calc(100% - 160px); /* 自动填充剩余空间 */
-        max-width: none; /* 移除最大宽度限制 */
-    }
+@media only screen and (max-width: 1600px) {
+    .publication {margin-bottom: 46px;}
+    .publication .row-media {width: 1060px; height: 130px; margin: auto; margin-bottom: 12px; display: block;}
+    .publication .row-text {display: block; width: 100%; margin-left: 0;}
     .press {display: block;}
 }

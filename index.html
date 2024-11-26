@@ -108,23 +108,28 @@
     
     <style>
         .video-container {
-            display: flex;
-            justify-content: space-around; /* 在可用空间内均匀分配元素 */
+            display: flex; /* 使用 flexbox 布局 */
+            justify-content: center; /* 水平居中 */
             flex-wrap: wrap; /* 允许换行 */
-            gap: 20px; /* 视频之间的间距 */
-            padding: 20px; /* 为容器添加一些内边距 */
-            max-width: 100%; /* 确保容器最大宽度为100% */
+            width: 100%; /* 确保容器宽度为100% */
+            padding: 0; /* 移除内边距 */
+            margin: 0; /* 移除外边距 */
         }
+    
         .video-content {
-            text-align: center;
-            flex: 1 1 calc(33% - 20px); /* 每个视频占据大约1/3宽度，减去间距 */
-            box-sizing: border-box; /* 包括padding和border在内计算宽度 */
+            flex: 1; /* 使每个视频内容占据可用空间 */
+            max-width: 100%; /* 确保没有最大宽度限制 */
+        }
+    
+        video {
+            width: 100%; /* 视频宽度为100% */
+            height: auto; /* 高度自适应 */
         }
     </style>
     
     <div class="video-container">
         <div class="video-content">
-            <video width="100%" height="315" controls autoplay muted loop>
+            <video controls autoplay muted loop>
                 <source src="my_files/iros2024.mp4" type="video/mp4">
             </video>
             <div class="video-description">
@@ -133,7 +138,7 @@
         </div>
     
         <div class="video-content">
-            <video width="100%" height="315" controls autoplay muted loop>
+            <video controls autoplay muted loop>
                 <source src="my_files/safety.mp4" type="video/mp4">
             </video>
             <div class="video-description">
@@ -142,7 +147,7 @@
         </div>
     
         <div class="video-content">
-            <video width="100%" height="315" controls autoplay muted loop>
+            <video controls autoplay muted loop>
                 <source src="my_files/unio4.mp4" type="video/mp4">
             </video>
             <div class="video-description">
