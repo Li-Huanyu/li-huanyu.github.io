@@ -15,37 +15,15 @@
 </head>
 <style>
     .header {
-        background-image: url('https://Lei-Kun.github.io/my_files/background.jpg');
-        background-size: cover; /* 背景图片覆盖整个容器 */
-        background-position: center; 
-        background-repeat: no-repeat; 
-        width: 100%; /* 确保宽度为100% */
-        margin: 0; /* 去掉外边距 */
+      background-image: url('https://Lei-Kun.github.io/my_files/background.jpg');
+      background-size: auto 185%; /* 背景图片高度填充容器，宽度自适应 */
+      background-position: center; /* 背景图片在容器中的水平位置居中 */
+      background-repeat: no-repeat; /* 防止背景图片重复 */
+      max-width: 1600px; /* 限制背景图片的最大宽度 */
+      margin: 0 auto; /* 将容器水平居中 */
+      /* 添加其他样式属性，如背景颜色等 */
     }
-
-    .content {
-        width: 100%; /* 确保内容容器宽度为100% */
-        margin: 0; /* 去掉外边距 */
-        padding: 20px; /* 如果需要内边距 */
-    }
-
-    .video-container {
-        display: flex;
-        justify-content: space-around; 
-        flex-wrap: wrap; 
-        gap: 20px; 
-        padding: 20px; 
-        width: 100%; /* 确保视频容器宽度为100% */
-        max-width: 100%; /* 最大宽度限制为100% */
-    }
-
-    /* 如果需要全局设置 */
-    body {
-        margin: 0; /* 去掉默认的body外边距 */
-        padding: 0; /* 去掉默认的body内边距 */
-        overflow-x: hidden; /* 隐藏横向滚动条 */
-    }
-</style>
+  </style>
 <style>
     .header,
     .header-name h1,
