@@ -48,6 +48,36 @@
   max-height: 100%;
 }
 </style>
+<style>
+    .video-description {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px; /* 字体大小 */
+        color: #333; /* 字体颜色 */
+    }
+</style>
+
+<style>
+    .video-container {
+        display: flex; /* 使用 flexbox 布局 */
+        justify-content: center; /* 水平居中 */
+        flex-wrap: wrap; /* 允许换行 */
+        width: 100%; /* 确保容器宽度为100% */
+        padding: 0; /* 移除内边距 */
+        margin: 0; /* 移除外边距 */
+        gap: 5px; /* 视频之间的间距 */
+    }
+
+    .video-content {
+        flex: 1; /* 使每个视频内容占据可用空间 */
+        max-width: 100%; /* 确保没有最大宽度限制 */
+    }
+
+    video {
+        width: 100%; /* 视频宽度为100% */
+        height: auto; /* 高度自适应 */
+    }
+</style>
 <!-- <style>
     body {
       background-image: linear-gradient(to bottom, rgba(225, 168, 97), rgba(255, 255, 255));
@@ -83,6 +113,34 @@
             I am a CS Ph.D. student at <a href="https://wustl.edu/">Washington University in St. Louis</a>. Prior to this, I worked as a research assistant at <a href="https://sqz.ac.cn/">Shanghai Qizhi institute</a>, where I am fortunate to work with Prof. <a href="http://hxu.rocks/">Huazhe Xu</a> at <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a>. Previously, I graduated from <a href="https://en.swjtu.edu.cn/">Southwest Jiaotong University</a>, where I fortunately worked with Prof. <a href="https://scholar.google.ca/citations?user=DSuR0f8AAAAJ&hl=en">Peng Guo</a> at <a href="https://en.swjtu.edu.cn/">SWJTU</a> and Prof. <a href="http://sciences-srv.aum.edu/~ywang/index.html">Yi Wang</a> at <a href="https://www.aum.edu/">Auburn University</a>.
         </p>
     </div>
+    <div class="video-container">
+        <div class="video-content">
+            <video controls autoplay muted loop>
+                <source src="my_files/iros2024.mp4" type="video/mp4">
+            </video>
+            <div class="video-description">
+                <p>[1] Visual quadrupedal loco-Manipulation</p>
+            </div>
+        </div>
+    
+        <div class="video-content">
+            <video controls autoplay muted loop>
+                <source src="my_files/safety.mp4" type="video/mp4">
+            </video>
+            <div class="video-description">
+                <p>[2] Finetune with safety consideration</p>
+            </div>
+        </div>
+    
+        <div class="video-content">
+            <video controls autoplay muted loop>
+                <source src="my_files/unio4.mp4" type="video/mp4">
+            </video>
+            <div class="video-description">
+                <p>[3] Finetune for fast adaptation</p>
+            </div>
+        </div>
+    </div>
     <div>
         <h2 class="noselect">Research interest</h2>
         <p>
@@ -97,65 +155,8 @@
             Previously, I conducted research on neural solvers for combinatorial optimization problems, i.e., in the field of AI for Operations Research. These neural agents have the potential to solve NP-hard problems with linear time complexity, see <a href="https://zhuanlan.zhihu.com/p/560810810">Zhihu</a>. 
         </p>
     </div>
-    <style>
-        .video-description {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 16px; /* 字体大小 */
-            color: #333; /* 字体颜色 */
-        }
-    </style>
+
     
-    <style>
-        .video-container {
-            display: flex; /* 使用 flexbox 布局 */
-            justify-content: center; /* 水平居中 */
-            flex-wrap: wrap; /* 允许换行 */
-            width: 100%; /* 确保容器宽度为100% */
-            padding: 0; /* 移除内边距 */
-            margin: 0; /* 移除外边距 */
-            gap: 5px; /* 视频之间的间距 */
-        }
-    
-        .video-content {
-            flex: 1; /* 使每个视频内容占据可用空间 */
-            max-width: 100%; /* 确保没有最大宽度限制 */
-        }
-    
-        video {
-            width: 100%; /* 视频宽度为100% */
-            height: auto; /* 高度自适应 */
-        }
-    </style>
-    
-    <div class="video-container">
-        <div class="video-content">
-            <video controls autoplay muted loop>
-                <source src="my_files/iros2024.mp4" type="video/mp4">
-            </video>
-            <div class="video-description">
-                <p>Visual quadrupedal loco-Manipulation</p>
-            </div>
-        </div>
-    
-        <div class="video-content">
-            <video controls autoplay muted loop>
-                <source src="my_files/safety.mp4" type="video/mp4">
-            </video>
-            <div class="video-description">
-                <p>Finetune with safety consideration</p>
-            </div>
-        </div>
-    
-        <div class="video-content">
-            <video controls autoplay muted loop>
-                <source src="my_files/unio4.mp4" type="video/mp4">
-            </video>
-            <div class="video-description">
-                <p>Finetune for fast adaptation</p>
-            </div>
-        </div>
-    </div>
     <div>
         <h2 class="noselect">Publications and preprints (Offline & online RL algorithms and robotics)</h2>
         <p>Papers sorted by recency, * indicates equal contribution.</p>
