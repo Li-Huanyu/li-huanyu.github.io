@@ -106,34 +106,44 @@
         }
     </style>
     
-    <div class="content">
-        <div style="text-align:center;">
-            <video width="560" height="315" controls autoplay>
+    <style>
+        .video-container {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            flex-wrap: wrap; /* 允许换行 */
+            gap: 20px; /* 视频之间的间距 */
+        }
+        .video-content {
+            text-align: center;
+        }
+    </style>
+    
+    <div class="video-container">
+        <div class="video-content">
+            <video width="360" height="215" controls autoplay>
                 <source src="my_files/iros2024.mp4" type="video/mp4">
             </video>
+            <div class="video-description">
+                <p>Visual quadrupedal loco-Manipulation</p>
+            </div>
         </div>
-        <div class="video-description">
-            <p>Visual quadrupedal loco-Manipulation</p>
-        </div>
-    </div>
-    <div class="content">
-        <div style="text-align:center;">
-            <video width="560" height="315" controls autoplay>
+    
+        <div class="video-content">
+            <video width="360" height="215" controls autoplay>
                 <source src="my_files/safety.mp4" type="video/mp4">
             </video>
+            <div class="video-description">
+                <p>Finetune with safety consideration</p>
+            </div>
         </div>
-        <div class="video-description">
-            <p>Finetune with safety consideration</p>
-        </div>
-    </div>
-    <div class="content">
-        <div style="text-align:center;">
-            <video width="560" height="315" controls autoplay>
+    
+        <div class="video-content">
+            <video width="360" height="215" controls autoplay>
                 <source src="my_files/unio4.mp4" type="video/mp4">
             </video>
-        </div>
-        <div class="video-description">
-            <p>Finetune for fast adaptation</p>
+            <div class="video-description">
+                <p>Finetune for fast adaptation</p>
+            </div>
         </div>
     </div>
     <div>
