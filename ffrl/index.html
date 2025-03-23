@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Visual Quadrupedal Loco-Manipulation from Demonstrations.">
+  <meta name="keywords" content="Quadrupedal, Loco-Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Visual Quadrupedal Loco-Manipulation from Demonstrations</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  
+  <!-- Default Statcounter code for Learning Visual Quadrupedal Loco
+  https://zhengmaohe.github.io/leg-manip/ -->
+  <script type="text/javascript">
+    var sc_project=12984028; 
+    var sc_invisible=1; 
+    var sc_security="bdf130eb"; 
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/12984028/0/bdf130eb/1/" alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+    <!-- End of Statcounter Code -->
+
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Learning Visual Quadrupedal Loco-Manipulation from Demonstrations</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zhengmaohe.github.io/">Zhengmao He</a><sup>1,4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://lei-kun.github.io/">Kun Lei</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://yanjieze.com/">Yanjie Ze</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://hybrid-robotics.berkeley.edu/koushil/">Koushil Sreenath</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://zyliatzju.github.io/">Zhongyu Li</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="http://hxu.rocks/">Huazhe Xu</a><sup>1,3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Shanghai Qi Zhi Institute.</span>
+            <span class="author-block"><sup>2</sup>University of California, Berkeley.</span>
+            <span class="author-block"><sup>3</sup>Tsinghua University, IIIS.</span>
+            <span class="author-block"><sup>4</sup>The Hong Kong University of Science and Technology (Guangzhou).</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2403.20328.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.20328"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/PfbkYxgmlR8"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>YouTube</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.bilibili.com/video/BV1kK421h7PE/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>BiliBili</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://twitter.com/ZhengmaoHe/status/1774842311765049698"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>Twitter</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code(comming soon)</span>
+                </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container"> <!-- is-max-desktop -->
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Video</h2> -->
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/PfbkYxgmlR8?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <!-- <div class="content has-text-justified">
+          <p>
+          We present a hierarchical learning framework to learn general loco-manipulation skills for quadruped robots. The framework enables a Unitree Aliengo robot to perform diverse skills in the real-world, including lifting baskets, pressing buttons, opening doors, and closing dishwashers, all while maintaining stable locomotion over a long distance. Videos can be found in supplementary materials.
+        </p>
+        </div> -->
+      </div>
+    </div>
+    <!--/ Paper video. -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Quadruped robots are progressively being integrated into human environments.
+            Despite the growing locomotion capabilities of quadrupedal robots, their interaction with objects in realistic scenes is still limited.
+            While additional robotic arms on quadrupedal robots enable manipulating objects, they are sometimes redundant given that 
+            <i>a quadruped robot is essentially a mobile unit equipped with four limbs, each possessing 3 degrees of freedom (DoFs)</i>.
+            Hence, we aim to empower a quadruped robot to execute real-world manipulation tasks using only its legs. 
+            We decompose the loco-manipulation process into a low-level reinforcement learning (RL)-based controller and a high-level Behavior Cloning (BC)-based planner. 
+            By parameterizing the manipulation trajectory, we synchronize the efforts of the upper and lower layers, thereby leveraging the advantages of both RL and BC.
+            Our approach is validated through simulations and real-world experiments, demonstrating the robot's ability to perform tasks that demand mobility and high precision, such as lifting a basket from the ground while moving, closing a dishwasher, pressing a button, and pushing a door.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    
+  </div>
+</section>
+<h2 class="title is-3" style="text-align: center; padding-bottom: 10px; font-style: italic;"><u>To address some concerns about sim2real, I have added some detailed information at the end.</u></h2>
+
+<section class="section">
+  <div class="container">
+    <!-- is-max-desktop  -->
+    <!-- <h2 class="title is-3">Autonomous Loco-Manipulation</h2> -->
+    <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Autonomous Loco-Manipulation</h2>
+
+    <h5>
+      <center>
+        Fully autonomous without any human teleoperation.
+      </center>
+    </h5>
+    <br/>
+
+
+    <h3 class="title is-5 has-text-centered is-centered">Real-World Tasks</h3>
+    <div class="container is-rounded">  
+      
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-dishwasher" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-real/dishwasher1_compress.mp4" type="video/mp4">
+          </video>
+          <!-- <video autoplay muted loop playsinline controls src="./static/videos/auto-real/dishwasher1_compress.mp4" width="100%"
+      style="border-radius:10px; "></video> -->
+          <p>Close dishwasher</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-button" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-real/button_compress.mp4" type="video/mp4">
+          </video>
+          <p>Press button</p>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-door" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-real/door1_compress.mp4" type="video/mp4">
+          </video>
+          <p>Open door</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-basket" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-real/basket_compress.mp4" type="video/mp4">
+          </video>
+          <p>Lift basket</p>
+        </div>
+      </div>
+
+
+      <!-- <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-dishwasher" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/auto-real/dishwasher1_compress.mp4" type="video/mp4">
+          </video>
+          <p>Close dishwasher</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-button" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/auto-real/button_compress.mp4" type="video/mp4">
+          </video>
+          <p>Press button</p>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-door" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/auto-real/door1_compress.mp4" type="video/mp4">
+          </video>
+          <p>Open door</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-basket" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/auto-real/basket_compress.mp4" type="video/mp4">
+          </video>
+          <p>Lift basket</p>
+        </div>
+      </div> -->
+    </div>
+    <br/>
+
+    <br/>
+    <h3 class="title is-5 has-text-centered is-centered">Simulation Tasks</h3>
+    <h5>
+      <center>
+        Visualized point clouds are transformed from egocentric perspective.
+      </center>
+    </h5>
+    <br/>
+    <div class="container is-rounded">  
+      
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-button" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-sim/button_compress.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="task-sim-button" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/pc_sim/button-pc_compress_40.mp4" type="video/mp4">
+          </video>
+          <p>Press button</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-handle" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-sim/handle_compress.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="task-sim-handle" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/pc_sim/handle-pc_compress_40.mp4" type="video/mp4">
+          </video>
+          <p>Pull handle</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-door" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-sim/door_compress.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="task-sim-door" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/pc_sim/door-pc_compress_40.mp4" type="video/mp4">
+          </video>
+          <p>Push door</p>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-basket" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-sim/basket-slim_compress.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="task-sim-basket" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/pc_sim/basket-pc_compress_40.mp4" type="video/mp4">
+          </video>
+          <p>Lift basket</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-valve" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-sim/valve_compress.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="task-sim-valve" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/pc_sim/valve-pc_compress_40.mp4" type="video/mp4">
+          </video>
+          <p>Twist valve</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-object" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-sim/scrape_compress.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="task-sim-object" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/pc_sim/table-pc_compress_40.mp4" type="video/mp4">
+          </video>
+          <p>Pull object</p>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-football" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-sim/football_compress.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="task-sim-football" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/pc_sim/football-pc_compress_40.mp4" type="video/mp4">
+          </video>
+          <p>Shoot ball</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-open" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-sim/open_compress.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="task-sim-open" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/pc_sim/open-pc_compress_40.mp4" type="video/mp4">
+          </video>
+          <p>Open dishwasher</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-door" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/auto-sim/close_compress.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="task-sim-door" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/pc_sim/close-pc_compress_40.mp4" type="video/mp4">
+          </video>
+          <p>Close dishwasher</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </br>
+  <div class="container">
+    <!-- is-max-desktop  -->
+    <!-- <h2 class="title is-3">Teleopration</h2>
+
+    <p>
+      Besides autonomous manipulation, we can <i>also</i> collect data via teleopration.  Additionally, this approach enables the collection of real-world data and the training of vision-based policies through teleoperation.
+    </p> -->
+    <br/>
+    <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Teleopration</h2>
+    <h5>
+      <center>
+        Besides autonomous manipulation, we can <i>also</i> collect data via teleopration.
+      </center>
+    </h5>
+    <!-- <br/> -->
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-ball">
+            <video poster="" id="tele-ball" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/teleop/ball_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-basket">
+            <video poster="" id="tele-basket" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/teleop/basket_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-button_door">
+            <video poster="" id="tele-button_door" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/teleop/button_door_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-valve">
+            <video poster="" id="tele-valve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/teleop/valve_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+  </div>
+</div>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-2" style="text-align: center;">Method</h2>
+        </br>
+          <!-- <center>
+          <video autoplay muted loop playsinline poster="./static/images/pipeline.jpg" style="width: 100%; border: 1px solid #bbb; border-radius: 10px; margin: 2.0%;">
+            <source src="./resources/Full/method_compress.mp4" type="video/mp4">
+          </video>
+          </center> -->
+        <div class="container", align="center" style="margin-top: -12px; margin-bottom: 32px">
+          <img src="./static/images/pipeline.jpg" style="width: 100%;" alt="">
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <h3 class="title is-5 has-text-centered is-centered">Track Random Curve with Our Low-level Control Policy</h3>
+    <h5>
+      <center>
+        The red sphere represents the Bézier control point, </br>the small coordinate axis represents the pose of the target trajectory at that time, </br>and the big coordinate axis represents the pose of the end-effector.
+      </center>
+    </h5>
+    </br>
+    <div class="container is-rounded is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-sim-button" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+            <source src="./static/videos/random/random_compress.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+  </div>
+  <br/>
+  <br/>
+  <h3 class="title is-5 has-text-centered is-centered">Expert Demonstration Collection</h3>
+  <h5>
+    <center>
+      We design manipulation trajectories for different tasks and collect demonstrations rapidly through parallel simulation. 
+    </center>
+  </h5>
+  </br>
+  <div class="container is-rounded is-max-desktop">  
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <video poster="" id="task-sim-button" autoplay muted playsinline loop controls width="95%" style="border-radius:10px; ">
+          <source src="./static/videos/demo/record_compress.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <h3 class="title is-5 has-text-centered is-centered">The post-processing process of point clouds in the real world</h3>
+  <div class="content has-text-justified">
+    <p>
+      To address the obvious visual info gap, I performed a series of post-processing on the point cloud of the real-world. These complex steps clearly constrain the potential of the proposed pipeline, which has resulted in me having to migrate only 4 tasks from simulation to reality.
+    </p>
+  </div>
+  </h5>
+  </br>
+  <h3 class="title is-5 has-text-centered is-centered">Real-World Basket Task</h3>
+  <div class="container is-rounded is-max-desktop">  
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <div class="container", align="center" style="margin-top: -12px; margin-bottom: 32px">
+          <img src="./static/images/visualize_basket_real.png" style="width: 100%;" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" >
+  <div class="container is-max-desktop content">
+    <!-- <h2 class="title">BibTeX</h2> -->
+    <h2 class="title is-2" style="text-align: center;">BibTeX</h2>
+    <pre class="bibtex"><code>@inproceedings{he2024learning,
+      title={Learning Visual Quadrupedal Loco-Manipulation from Demonstrations},
+      author={Zhengmao He, Kun Lei, Yanjie Ze, Koushil Sreenath, Zhongyu Li, Huazhe Xu},
+      year={2024},
+      eprint={2403.20328},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+    }</code></pre>
+  </div>
+  <div class="container is-max-desktop content">
+    <!-- <h2 class="title">Contact</h2> -->
+    <h2 class="title is-2" style="text-align: center;">Contact</h2>
+    Feel free to contact <a target="_blank" href="https://zhengmaohe.github.io">Zhengmao He</a> if you have any questions on this project.
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+        <div class="content">
+          Website template adapted from  <a target="_blank" href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+        </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
