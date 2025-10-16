@@ -1,19 +1,21 @@
 html {-webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 body {background-color: #fdfdfd; color: #2c3c4c; margin: 0; font-size: 13px;}
-h1 {margin-bottom: 32px; font-size: 2.6em;}
-h2 {margin-top: 48px;}
+h1 {margin-bottom: 12px; font-size: 2.6em; color: #1e293b;}
+h2 {margin-top: 32px;}
 h1, h2 {color: #234;}
 h3, h4, h5 {color: #345;}
 h1, h2, h3, h4, h5, a, p, span, body, div {font-weight: normal; font-family: 'Lato', Verdana, Helvetica, sans-serif;}
-.header {background: linear-gradient(to bottom, #f5f5f8 10%, #f1f1f5 90%); width: 100%; padding-top: 16px; padding-bottom: 32px;}
+.header {background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); width: 100%; padding-top: 24px; padding-bottom: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
 .header-profile-picture, .header-text {display: inline-block;}
 .header-name h1 {margin: 0;}
-.header-subtitle {margin-bottom: 12px;}
-.header-profile-picture {width: 100px; height: 100px; margin-right: 12px; border-radius: 50%; background-image: url(files/me.jpeg); background-position: center; background-size: contain;}
-.content {max-width: 1200px; padding-left: 16px; padding-right: 16px; margin: auto; margin-top: 48px;}
-.hr {width: 100%; height: 1px; margin: 48px 0; background-color: #d6dbdf;}
-a {color: #2471a3; text-decoration: none;}
+.header-subtitle {margin-bottom: 8px; color: #475569; font-size: 1.1em;}
+.header-profile-picture {width: 120px; height: 120px; margin-right: 20px; border-radius: 50%; background-image: url(files/huanyu.jpg); background-position: center; background-size: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+.content {max-width: 1200px; padding-left: 16px; padding-right: 16px; margin: auto; margin-top: 32px;}
+.hr {width: 100%; height: 1px; margin: 32px 0; background-color: #d6dbdf;}
+a {color: #2471a3; text-decoration: none; transition: color 0.3s ease;}
 a:focus, a:hover {color: #f09228;}
+.header-links a {color: #1e293b; background: rgba(255,255,255,0.7); padding: 6px 12px; border-radius: 4px; display: inline-block; margin: 4px 2px; transition: all 0.3s ease; border: 1px solid rgba(100,116,139,0.2);}
+.header-links a:hover {background: rgba(255,255,255,0.95); transform: translateY(-2px); border-color: rgba(100,116,139,0.4);}
 p {line-height: 1.5em;}
 .nobreak {white-space: nowrap;}
 .noselect {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
@@ -25,19 +27,28 @@ p {line-height: 1.5em;}
 .row-text {display: block; float: left; margin-left: 12px; line-height: 1.5em; max-width: 566px;}
 .row-text span {line-height: inherit;}
 .clearfix {content: ""; clear: both; display: table;}
-.publication {margin-bottom: 32px; padding-left: 8px;}
+.publication {margin-bottom: 24px; padding: 16px; border-left: 3px solid #667eea; background: #f9f9fb; border-radius: 4px; transition: all 0.3s ease;}
+.publication:hover {box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateX(4px);}
 .publication.highlight {background-color: #fff8df; width: 150%; padding-top: 8px; padding-bottom: 8px; border-radius: 4px;}
 .press {width: 100px; height: 80px; border: 1px solid #def; margin-right: 12px; background-size: cover;}  
 .img-contain {background-size: contain !important;}
-.footer {background-color: #345; width: 100%}
+.footer {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 100%}
 .footer-content {color: #fff; font-size: 10px; padding: 6px 0; max-width: 1200px; margin: auto;}
 .footer-content a {color: #fff; text-decoration: underline;}
 .footer-content a:hover {color: #f09228 !important;}
 .stars {font-size: 10px; display: inline-block; margin-left: 6px; color: #666;}
+.btn {display: inline-block; padding: 4px 10px; margin: 2px; background: #f0f0f0; border-radius: 3px; font-size: 0.9em; transition: all 0.3s ease;}
+.btn:hover {background: #e0e0e0; transform: translateY(-1px);}
+.btn-orange {background: #ff9800; color: #fff !important;}
+.btn-orange:hover {background: #f57c00;}
+.btn-red {background: #e53935; color: #fff !important;}
+.btn-red:hover {background: #c62828;}
+h2 {border-bottom: 2px solid #667eea; padding-bottom: 8px; display: inline-block;}
+.publication-title {font-size: 1.1em; line-height: 1.4em;}
 
 @media only screen and (max-width: 1350px) {
     .header-profile-picture, .header-text {display: block; margin: auto; text-align: center;}
-    .header-profile-picture {margin-bottom: 12px; width: 140px; height: 140px;}
+    .header-profile-picture {margin-bottom: 16px; width: 140px; height: 140px;}
     body {font-size: 18px;}
     a.btn {font-size: 14px; padding: 2px 6px;}
 }
