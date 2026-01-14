@@ -45,6 +45,8 @@ p {line-height: 1.5em;}
 .btn-red:hover {background: #c62828;}
 h2 {border-bottom: 2px solid #667eea; padding-bottom: 8px; display: inline-block;}
 .publication-title {font-size: 1.1em; line-height: 1.4em;}
+.publication-links {margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center;}
+.publication-links .btn {margin: 0;}
 
 @media only screen and (max-width: 1350px) {
     .header-profile-picture, .header-text {display: block; margin: auto; text-align: center;}
