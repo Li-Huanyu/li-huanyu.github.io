@@ -24,7 +24,7 @@ p {line-height: 1.5em;}
 .bulletpoints {line-height: 1.5em;}
 .row {box-sizing: border-box;}
 .row-media {display: block; float: left; width: 160px; height: 90px; background-position: center; background-size: contain; background-repeat: no-repeat;}
-.row-media video {display: block; width: 160px; height: 90px; object-fit: contain;}
+.row-media video {display: block; width: 100%; height: 100%; object-fit: contain;}
 .row-text {display: block; float: left; margin-left: 12px; line-height: 1.5em; max-width: 566px;}
 .row-text span {line-height: inherit;}
 .clearfix {content: ""; clear: both; display: table;}
